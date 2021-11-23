@@ -1,21 +1,41 @@
 # HP-OMEN-Linux-RGBColour-ChangerScript
 
 ## Description
-This is a simple script I'm making on my free time in order to be able to change the HP OMEN laptops' RGB 4 zone keyboard lighning colour.
-As OMEN laptops doesn't really have any support from HP, there is no OmenCommandCenter (formerly OMEN Gaming Hub) nor any official way to change the RGB 4 zone lighning colour,
-so the only way to achive anything of this is through the community effort.
-
-I'm still a Computer Engineering student learning how to code, and this is the first FOSS project I've done, so sorry if the code quality is quite awful, my technical skills are weak or I don't work on this too much (mostly because I barely have any free time, as I'm very busy whith uni projects and exams, but I promisse this summer I'm gonna put much more time on this).
+This is a fork of [JesusXD88's Project](https://github.com/JesusXD88/HP-OMEN-Linux-RGBColour-ChangerScript).
+This script allow to change the color of the 4 Zones for HP Omen Laptop since for linux there isn't any Omen Command Center (or Omen Gaming Hub).
+This script can be used 'as it' or with arguments.
 
 ## Acknowledgements
 Thanks [pelrun](https://github.com/pelrun) for the [Kernel module](https://github.com/pelrun/hp-omen-linux-module) that allow us to achieve this! 
 
+## Usage
+Download this repo ( /lang files are really important, since there is all message contained in script!) or
+```
+git clone https://github.com/DHD2280/HP-OMEN-Linux-RGBColour-ChangerScript
+```
+cd into downloaded dir then you can call this script by simply (require sudo!)
+```
+# sh ./OmenRGBZone.sh
+```
+or 
+```
+$ sudo ./OmenRGBZone.sh
+```
+You will be guided by script.
+
+## Usage with args
+This script now 'supports' args.
+For help just
+```
+./OmenRGBZone.sh --help
+```
+You can change color for all zones in the some moment or a color for every zone with:
+```
+./OmenRGBZone.sh -z all -c <hex_color>
+```
+
+
 ## TODO's list
 * Make the script go back to menu to select other zones/colours.
 * Improve the code quality.
-* Improve the menu.
-* Add preset colours, like Red, Blue, Yellow, Orange, Cyan...
-* Write usage guide here on GitHub and on the script.
-* Make an attempt to do something like the cyclic lightning, maybe using loops, and forking into the background or by a daemon.
-* Mayyybe (if I have time this summer and I'm able to learn how) write a simple UI using Qt/GTK (maybe Qt as I'm a KDE Plasma user, but I might change to GTK for more compatibility if this project catches on).
-* And mayyyyyybe if I'm able to write the GUI app, I might think about writing a Plasma Widget (again, if I learn how to do that and if this project catches on).
+* Improve this README
